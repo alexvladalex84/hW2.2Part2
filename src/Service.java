@@ -1,14 +1,18 @@
-public interface Serviсe {
+public class Service implements ServiceForEverything {
 
 
-    public static void updateTyre() {
+    @Override
+    public void updateTyre() {
         System.out.println(" Меняем покрышку ");
     }
-    static void checkEngine() {
+
+    @Override
+    public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
 
-    static void checkTrailer() {
+    @Override
+    public void checkTrailer() {
         System.out.println("Проверяем прицеп");
     }
 }

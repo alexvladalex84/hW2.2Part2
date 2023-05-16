@@ -1,4 +1,4 @@
-public class  Bicycle extends Transport implements Serviсe {
+public class  Bicycle extends Transport  {
 
     public Bicycle(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
@@ -11,8 +11,9 @@ public class  Bicycle extends Transport implements Serviсe {
     public void ServiceSt() {
         if (this.getClass().equals(getClass()))
             System.out.println(" Обслуживаем " + getModelName());
-        Serviсe.updateTyre();
         System.out.println(getModelName() + " " + getWheelsCount());
+        Service service = new Service();
+        service.updateTyre();
 
     }
 
